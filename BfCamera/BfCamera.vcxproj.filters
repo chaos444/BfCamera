@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Hooking">
+      <UniqueIdentifier>{086c9ec8-473e-4969-b7c5-a73e54f75301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SigScan">
+      <UniqueIdentifier>{a8357638-0b24-4a2d-a268-72ae0c662e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooking\minhook">
+      <UniqueIdentifier>{2ed95479-0e15-42b5-8622-d63cab43b796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooking\minhook\hde">
+      <UniqueIdentifier>{55a4bbb3-d52b-4521-a177-84d3e4219b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="typeinfo">
+      <UniqueIdentifier>{2067933c-7db1-407b-83a9-b4f41b03e5e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="entrypoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SigScan\SigScan.cpp">
+      <Filter>SigScan</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\Wendy.cpp">
+      <Filter>Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\minhook\buffer.c">
+      <Filter>Hooking\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\minhook\hook.c">
+      <Filter>Hooking\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\minhook\trampoline.c">
+      <Filter>Hooking\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\minhook\hde\hde32.c">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\minhook\hde\hde64.c">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\fonctions.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\FrostbiteGeneral.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\FrostbiteTypeInfo.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\SdkClass.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\SdkEnum.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\SdkPrimitive.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="typeinfo\SdkStruct.cpp">
+      <Filter>typeinfo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SigScan\SigScan.h">
+      <Filter>SigScan</Filter>
+    </ClInclude>
+    <ClInclude Include="SigScan\StaticOffsets.h">
+      <Filter>SigScan</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\Wendy.h">
+      <Filter>Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\buffer.h">
+      <Filter>Hooking\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\MinHook.h">
+      <Filter>Hooking\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\trampoline.h">
+      <Filter>Hooking\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\hde\hde32.h">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\hde\hde64.h">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\hde\pstdint.h">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\hde\table32.h">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\minhook\hde\table64.h">
+      <Filter>Hooking\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\Eastl.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\fbsdk.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\fonctions.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\FrostBiteGeneral.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\FrostbiteTypeInfo.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\sdk.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\SdkClass.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\SdkEnum.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\SdkGenerator.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\SdkPrimitive.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\SdkStruct.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="typeinfo\Util.h">
+      <Filter>typeinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="fbsdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
