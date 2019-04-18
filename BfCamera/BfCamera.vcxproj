@@ -72,6 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;$(DXSDK_DIR)\Lib\x64</LibraryPath>
+    <GenerateManifest>true</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -115,16 +118,26 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <Version>0.1</Version>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="entrypoint.cpp" />
+    <ClCompile Include="Hooking\d3d11hook.cpp" />
     <ClCompile Include="Hooking\minhook\buffer.c" />
     <ClCompile Include="Hooking\minhook\hde\hde32.c" />
     <ClCompile Include="Hooking\minhook\hde\hde64.c" />
     <ClCompile Include="Hooking\minhook\hook.c" />
     <ClCompile Include="Hooking\minhook\trampoline.c" />
     <ClCompile Include="Hooking\Wendy.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_dx11.cpp" />
+    <ClCompile Include="InputHook.cpp" />
+    <ClCompile Include="KeyMan.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="SigScan\SigScan.cpp" />
     <ClCompile Include="typeinfo\fonctions.cpp" />
     <ClCompile Include="typeinfo\FrostbiteGeneral.cpp" />
@@ -135,7 +148,10 @@
     <ClCompile Include="typeinfo\SdkStruct.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Discord\discord_register.h" />
+    <ClInclude Include="Discord\discord_rpc.h" />
     <ClInclude Include="fbsdk.h" />
+    <ClInclude Include="Hooking\d3d11hook.h" />
     <ClInclude Include="Hooking\minhook\buffer.h" />
     <ClInclude Include="Hooking\minhook\hde\hde32.h" />
     <ClInclude Include="Hooking\minhook\hde\hde64.h" />
@@ -145,6 +161,19 @@
     <ClInclude Include="Hooking\minhook\MinHook.h" />
     <ClInclude Include="Hooking\minhook\trampoline.h" />
     <ClInclude Include="Hooking\Wendy.h" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\stb_rect_pack.h" />
+    <ClInclude Include="ImGui\stb_textedit.h" />
+    <ClInclude Include="ImGui\stb_truetype.h" />
+    <ClInclude Include="imgui_impl_dx11.h" />
+    <ClInclude Include="InputHook.h" />
+    <ClInclude Include="KeyMan.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SettingsMan.h" />
     <ClInclude Include="SigScan\SigScan.h" />
     <ClInclude Include="SigScan\StaticOffsets.h" />
     <ClInclude Include="typeinfo\Eastl.h" />
@@ -159,6 +188,9 @@
     <ClInclude Include="typeinfo\SdkPrimitive.h" />
     <ClInclude Include="typeinfo\SdkStruct.h" />
     <ClInclude Include="typeinfo\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BfCamera.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

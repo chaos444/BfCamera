@@ -1,3 +1,4 @@
+#pragma once
 #include "fonctions.h"
 #include "SdkGenerator.h"
 #include <string>

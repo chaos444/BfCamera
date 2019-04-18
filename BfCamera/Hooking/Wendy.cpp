@@ -31,9 +31,14 @@ void Wendy::UnHook(void* addr) {
 }
 
 void Wendy::UnHookAll(void) {
+#ifdef HOOKLIB_MINHOOK
+	MH_DisableHook(MH_ALL_HOOKS);
+	MH_Uninitialize();
+#else
 	for (auto &addr : Wendy::hookAddresses) {
 		Wendy::UnHook(addr);
 	}
+#endif
 }
 
 std::vector<void*> Wendy::hookAddresses = {};
